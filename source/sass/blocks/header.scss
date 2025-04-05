@@ -1,0 +1,19 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+
+  width: 100%;
+
+  background-color: $color-default-white;
+}
+
+.header.is-opened {
+  bottom: 0;
+  overflow-y: auto;
+}
+
+[data-color-theme="dark"] .header {
+  background-color: $color-black;
+}

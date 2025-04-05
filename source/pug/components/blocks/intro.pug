@@ -1,0 +1,36 @@
+mixin intro()
+  section.intro.section-navigation#intro
+    .container
+      .intro__wrap
+        h1.titles(data-lang-key="headersSection")
+        p(data-lang-key="introSection")
+        .toggles-container.hidden(data-da=".navigator-toggles, 767, first")
+          fieldset.toggle(data-toggle-color-theme)
+            legend.visually-hidden Переключатель цветовой схемы
+            label
+              input.visually-hidden(type="radio" name="toggle-color-theme" value="light" aria-label="светлая")
+              span
+                +icon("icon-sun", 16, 16)
+            label
+              input.visually-hidden(type="radio" name="toggle-color-theme" value="dark" aria-label="темная")
+              span
+                +icon("icon-dark", 16, 16)
+          fieldset.toggle(data-toggle-language)
+            legend.visually-hidden Переключатель языка
+            label
+              input.visually-hidden(type="radio" name="toggle-language" value="ru" aria-label="русский" checked)
+              span Ru
+            label
+              input.visually-hidden(type="radio" name="toggle-language" value="en" aria-label="английский" )
+              span En
+
+      .intro__image
+        +picture-media({
+          media: "max-width: 767px",
+          path: "content",
+          image: "i",
+          image2: "i-mobile",
+          format: "jpg",
+          alt: "фото ",
+        })
+

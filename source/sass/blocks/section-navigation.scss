@@ -1,0 +1,23 @@
+.section-navigation {
+  padding: 50px 0;
+
+  text-align: center;
+
+  &:nth-of-type(2n) {
+    background-color: $color-white-smoke;
+  }
+
+  @include vp-767 {
+    padding: 40px 0;
+  }
+
+  @include vp-366 {
+    padding: 60px 0;
+  }
+}
+
+[data-color-theme="dark"] .section-navigation {
+  &:nth-of-type(2n) {
+    background-color: $color-night-rider;
+  }
+}
