@@ -1,3 +1,4 @@
+/*
 .intro {
   &__wrap {
     display: flex;
@@ -90,5 +91,61 @@
     height: 100%;
 
     object-fit: cover;
+  }
+}
+*/
+
+.intro {
+  .container2 {
+    display: flex;
+    gap: 40px;
+
+    padding-top: 80px;
+  }
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+
+  h1 {
+    text-align: left;
+    margin-right: auto;
+  }
+
+  &__text {
+    text-align: left;
+    margin-right: auto;
+  }
+
+  .toggles-container {
+    margin-top: auto;
+  }
+
+  .toggle {
+    margin-right: auto;
+  }
+
+  &__image {
+    width: 30%;
+    aspect-ratio: 3 / 4;
+
+    order: -1;
+
+    @include vp-767 {
+      width: 100%;
+      aspect-ratio: 9 / 6;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+    }
   }
 }

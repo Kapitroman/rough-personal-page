@@ -24,10 +24,12 @@ mixin header(headerMods)
     ]
 
   header.header(class=headerMods, data-fix-block)
-    .container
+    .container2
       nav.navigation-changer
         .navigation-changer__wrapper-toggle
-          h1.titles(data-lang-key="headerTitle")
+          .navigation-changer__wrapper-text
+            h1.titles(data-lang-key="headerTitle")
+            p.navigation-changer__text(data-lang-key="headerTitle")
           button.navigation-changer__toggle(type="button", aria-label="Переключатель отображения меню", aria-expanded="false")
             span.navigation-changer__burger-line.navigation-changer__burger-line--top
             span.navigation-changer__burger-line.navigation-changer__burger-line--center

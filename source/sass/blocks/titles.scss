@@ -18,15 +18,18 @@ h1.titles {
   line-height: 59px;
 
   @include vp-1023 {
-    font-size: 36px;
-    line-height: 42px;
+    // font-size: 36px;
+    // line-height: 42px;
+
+    font-size: 24px;
+    line-height: 32px;
   }
 
   @include vp-767 {
-    margin-right: 40px;
+    margin-right: 10px;
 
     font-size: 28px;
-    line-height: 36px;
+    line-height: 32px;
   }
 
   @include vp-366 {

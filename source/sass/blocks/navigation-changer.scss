@@ -3,12 +3,12 @@
   min-height: 79px;
 
   @include vp-767 {
-    padding: 30px 0 30px 0;
+    padding: 20px 0 20px 0;
     min-height: initial;
   }
 
   @include vp-366 {
-    padding: 25px 0 20px 0;
+    padding: 20px 0 20px 0;
   }
 
   &__menu {
@@ -47,7 +47,7 @@
       font-size: 24px;
       line-height: 32px;
 
-      li + li {
+      li+li {
         margin-top: 50px;
       }
     }
@@ -55,7 +55,7 @@
     @include vp-366 {
       margin-bottom: 30px;
 
-      li + li {
+      li+li {
         margin-top: 30px;
       }
     }
@@ -73,7 +73,9 @@
 
     transition: color 0.6s ease;
 
-    @media (hover: hover), screen and (min-width: 0\0) {
+    @media (hover: hover),
+    screen and (min-width: 0\0) {
+
       &:hover,
       &:focus {
         color: rgba($color-black, 0.7);
@@ -129,6 +131,10 @@
     }
   }
 
+  &__text {
+    margin: 5px 0 0 0;
+  }
+
   &__toggle {
     position: relative;
 
@@ -145,7 +151,9 @@
 
     transform: translateX(9px);
 
-    @media (hover: hover), screen and (min-width: 0\0) {
+    @media (hover: hover),
+    screen and (min-width: 0\0) {
+
       &:hover,
       &:focus {
         opacity: 0.8;
@@ -230,7 +238,7 @@
       }
 
       &--center {
-        transition: opacity $trans-400 0.3s,;
+        transition: opacity $trans-400 0.3s, ;
       }
 
       &--bottom {
@@ -258,7 +266,9 @@
       color: $color-default-white;
     }
 
-    @media (hover: hover), screen and (min-width: 0\0) {
+    @media (hover: hover),
+    screen and (min-width: 0\0) {
+
       &:hover,
       &:focus {
         color: $color-grey;
@@ -266,7 +276,7 @@
     }
   }
 
-  .navigation-changer__burger-line  {
+  .navigation-changer__burger-line {
     background-color: $color-default-white;
   }
 }
