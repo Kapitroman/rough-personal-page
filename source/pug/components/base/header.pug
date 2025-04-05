@@ -23,7 +23,7 @@ mixin header(headerMods)
       },
     ]
 
-  header.header(class=headerMods, data-fix-block)
+  header.header.header--sticky(class=headerMods, data-fix-block, data-header="sticky", data-hide-point="50")
     .container2
       nav.navigation-changer
         .navigation-changer__wrapper-toggle

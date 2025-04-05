@@ -7,11 +7,24 @@
   width: 100%;
 
   background-color: $color-default-white;
+
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .header.is-opened {
   bottom: 0;
   overflow-y: auto;
+}
+
+.header--sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.header.is-hidden {
+  transform: translateY(-100%);
 }
 
 [data-color-theme="dark"] .header {

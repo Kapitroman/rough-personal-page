@@ -748,11 +748,27 @@ button,
   z-index: 3;
   width: 100%;
   background-color: #ffffff;
+  -webkit-transition: background-color 0.3s ease, -webkit-transform 0.3s ease;
+  transition: background-color 0.3s ease, -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  transition: transform 0.3s ease, background-color 0.3s ease, -webkit-transform 0.3s ease;
 }
 
 .header.is-opened {
   bottom: 0;
   overflow-y: auto;
+}
+
+.header--sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.header.is-hidden {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
 }
 
 [data-color-theme=dark] .header {
@@ -832,12 +848,6 @@ button,
 h1.titles {
   font-size: 47px;
   line-height: 59px;
-}
-@media (max-width: 1023px) {
-  h1.titles {
-    font-size: 24px;
-    line-height: 32px;
-  }
 }
 @media (max-width: 767px) {
   h1.titles {

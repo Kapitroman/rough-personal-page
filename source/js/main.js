@@ -9,6 +9,8 @@ import { initChangeColorTheme } from './modules/init-change-color-theme';
 import { initTabs } from './modules/init-tabs';
 import { annotateTextBlocks } from './modules/annotateTextBlocks';
 
+import { StickyHeader } from './modules/sticky-header';
+
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -31,6 +33,9 @@ window.addEventListener('DOMContentLoaded', () => {
     initBurgerMenu();
     initTabs();
     annotateTextBlocks();
+
+    const stickyHeader = new StickyHeader();
+    stickyHeader.init();
   });
 });
 
