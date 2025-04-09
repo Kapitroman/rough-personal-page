@@ -1,3 +1,5 @@
+const breakpoint = window.matchMedia('(min-width:768px)');
+
 const moveTo = () => {
   const MoveTo = (() => {
     /**
@@ -7,14 +9,15 @@ const moveTo = () => {
 
     // добавлено вычесление высоты header
     const heightHeader = document.querySelector('.header').clientHeight;
-    //console.log(heightHeader);
+
+    // const heightHeader = breakpoint.matches ? document.querySelector('.header').clientHeight : 0;
 
     const defaults = {
       tolerance: heightHeader,
       duration: 800,
       easing: 'easeOutQuart',
       container: window,
-      callback: function() {},
+      callback: function () { },
     };
 
     /**
@@ -56,7 +59,7 @@ const moveTo = () => {
      * @return {string} the converted value
      */
     function kebabCase(val) {
-      return val.replace(/([A-Z])/g, function($1) {
+      return val.replace(/([A-Z])/g, function ($1) {
         return '-' + $1.toLowerCase();
       });
     };
@@ -80,7 +83,7 @@ const moveTo = () => {
      */
     function MoveTo(options = {}, easeFunctions = {}) {
       this.options = mergeObject(defaults, options);
-      this.easeFunctions = mergeObject({easeOutQuart}, easeFunctions);
+      this.easeFunctions = mergeObject({ easeOutQuart }, easeFunctions);
     }
 
     /**
@@ -89,7 +92,7 @@ const moveTo = () => {
      * @param  {function} callback Callback function
      * @return {function|void} unregister function
      */
-    MoveTo.prototype.registerTrigger = function(dom, callback) {
+    MoveTo.prototype.registerTrigger = function (dom, callback) {
       if (!dom) {
         return;
       }
@@ -121,7 +124,7 @@ const moveTo = () => {
      * @param  {HTMLElement|number} target Target element to be scrolled or target position
      * @param  {object} options Custom options
      */
-    MoveTo.prototype.move = function(target, options = {}) {
+    MoveTo.prototype.move = function (target, options = {}) {
       if (target !== 0 && !target) {
         return;
       }
@@ -177,7 +180,7 @@ const moveTo = () => {
      * @param {string}   name Ease function name
      * @param {function} fn   Ease function
      */
-    MoveTo.prototype.addEaseFunction = function(name, fn) {
+    MoveTo.prototype.addEaseFunction = function (name, fn) {
       this.easeFunctions[name] = fn;
     };
 
@@ -201,7 +204,7 @@ const moveTo = () => {
 
     return MoveTo;
   })();
-    window.MoveTo = MoveTo;
+  window.MoveTo = MoveTo;
 };
 
 export default moveTo();

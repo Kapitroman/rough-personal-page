@@ -30,3 +30,14 @@
 [data-color-theme="dark"] .header {
   background-color: $color-black;
 }
+
+.header .contacts-links {
+  display: none;
+
+  @include vp-767 {
+    display: inline-flex;
+
+    margin-top: auto;
+
+  }
+}

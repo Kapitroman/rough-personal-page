@@ -775,6 +775,18 @@ button,
   background-color: #1f2023;
 }
 
+.header .contacts-links {
+  display: none;
+}
+@media (max-width: 767px) {
+  .header .contacts-links {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    margin-top: auto;
+  }
+}
+
 .footer__text {
   margin: 0;
   margin-bottom: 25px;
@@ -852,16 +864,10 @@ h1.titles {
 @media (max-width: 767px) {
   h1.titles {
     margin-right: 10px;
-    font-size: 28px;
-    line-height: 32px;
+    font-size: 24px;
+    line-height: 24px;
   }
 }
-@media (max-width: 366px) {
-  h1.titles {
-    line-height: 30px;
-  }
-}
-
 h2.titles {
   margin-bottom: 35px;
 }
@@ -872,7 +878,14 @@ h2.titles {
 }
 @media (max-width: 767px) {
   .navigation-changer {
-    padding: 20px 0 20px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 18px 0 18px 0;
     min-height: initial;
   }
 }
@@ -882,7 +895,7 @@ h2.titles {
   }
 }
 .navigation-changer__menu {
-  padding: 22px 0 26px 0;
+  padding: 26px 0 26px 0;
 }
 @media (max-width: 767px) {
   .navigation-changer__menu {
@@ -924,20 +937,20 @@ h2.titles {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    margin-bottom: 50px;
-    font-size: 24px;
-    line-height: 32px;
+    margin-bottom: 60px;
+    font-size: 20px;
+    line-height: 24px;
   }
   .navigation-changer__list li + li {
-    margin-top: 50px;
+    margin-top: 25px;
   }
 }
-@media (max-width: 366px) {
+@media (max-width: 320px) {
   .navigation-changer__list {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
   }
   .navigation-changer__list li + li {
-    margin-top: 30px;
+    margin-top: 15px;
   }
 }
 .navigation-changer__link {
@@ -1006,6 +1019,8 @@ h2.titles {
 }
 .navigation-changer__text {
   margin: 5px 0 0 0;
+  font-size: 16px;
+  line-height: 16px;
 }
 .navigation-changer__toggle {
   position: relative;
@@ -1056,12 +1071,14 @@ h2.titles {
   .is-opened .navigation-changer {
     border: none;
     padding-bottom: 30px;
+    height: 100%;
   }
   .is-opened .navigation-changer__item {
     margin-right: auto;
+    margin-left: auto;
   }
   .is-opened .navigation-changer__wrapper-toggle {
-    margin-bottom: 60px;
+    margin-bottom: 50px;
   }
   .is-opened .navigation-changer__toggle {
     -webkit-box-align: center;
@@ -1084,10 +1101,8 @@ h2.titles {
             animation: open-menu-bottom 0.6s ease;
   }
 }
-@media (max-width: 366px) {
-  .is-opened .navigation-changer__wrapper-toggle {
-    margin-bottom: 30px;
-  }
+.is-opened .container2 {
+  height: 100%;
 }
 
 @media (max-width: 767px) {
@@ -1129,6 +1144,18 @@ h2.titles {
   background-color: #ffffff;
 }
 
+.navigation-changer .contacts-links {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .is-opened .navigation-changer .contacts-links {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    margin-top: auto;
+  }
+}
 .section-navigation {
   padding: 50px 0;
   text-align: center;
@@ -1411,7 +1438,7 @@ h2.titles {
   margin-right: auto;
 }
 .intro__image {
-  width: 30%;
+  width: 40%;
   aspect-ratio: 3/4;
   -webkit-box-ordinal-group: 0;
       -ms-flex-order: -1;
@@ -2012,6 +2039,40 @@ h2.titles {
 }
 [data-color-theme=dark] .tabs .tabs__control.is-active::after {
   border-bottom: 1px solid #303030;
+}
+
+.contacts-links {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+.contacts-links__link {
+  display: block;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+.contacts-links__link a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.contacts-links__link svg {
+  color: #1f2023;
+}
+@media (hover: hover), screen and (min-width: 0\0 ) {
+  .contacts-links__link:hover, .contacts-links__link:focus {
+    opacity: 0.8;
+  }
+}
+.contacts-links__link:not(:last-child) {
+  margin-right: 60px;
+}
+
+[data-color-theme=dark] .contacts-links svg {
+  color: #ffffff;
 }
 
 /* @media (hover: hover), screen and (min-width: 0\0) {

@@ -202,7 +202,6 @@
       "Одностраничный лендинг c большим колличеством CSS, SVG, JS, и WebGL анимаций",
       "Акцент верстки на тени и градиенты.",
       "Страницы интернет-магазина. Адаптивная верстка. Верстка и JS поддерживает EI 11.",
-      "Лендинг. Адаптивная верстка. Верстка и JS поддерживает EI 11.",
       "Сайт-приложение. Взаимодействие с DOM, реализация WEB-API связанных с интерфейсом, валидация формы и др.",
       "SPA. Реализация паттерна Model-Presenter-View, двухсторонее всязывание данных, ООП, паттерны проектирования, WEB-API и др",
       "Личный блог. Node.js/Express, REST API, PostgreSQL, Sequelize, WebSocket, тестирование, аутентификация, авторизация и другое"
@@ -217,7 +216,6 @@
       "Pagelanding with a lot of CSS, SVG, JS, and WebGL animations",
       "The layout emphasis on shadows and gradients.",
       "Site pages. Responsive layout, JavaScript for components. Layout and JS support EI 11.",
-      "Landing page. Responsive layout, JavaScript for components. Layout and JS support EI 11.",
       "Application site. Interaction with DOM, implementation of WEB-APIs related to the interface, form validation, etc.",
       "SPA. Implementing the Model-Presenter-View Pattern, Data-binding, Object-oriented programming, Design Patterns, client WEB-API and more",
       "Personal blog. Node.js/Express, REST API, PostgreSQL, Sequelize, WebSocket, testing, authentication, authorization and more"

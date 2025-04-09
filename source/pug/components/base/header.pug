@@ -41,3 +41,17 @@ mixin header(headerMods)
               li.navigation-changer__item
                 a.navigation-changer__link(href=link.href, data-navigation-link, data-lang-key="navigationLinks")
           .navigator-toggles
+        ul.contacts-links
+            li.contacts-links__link
+              span.visually-hidden github
+              a(href="https://github.com/Kapitroman")
+                +icon("icon-github", 40, 40)
+            li.contacts-links__link
+              span.visually-hidden telegram
+              a(href="https://t.me/kapitroman")
+                +icon("icon-telegram", 40, 40)
+            li.contacts-links__link
+              span.visually-hidden skype
+              a(href="skype:kapiroman")
+                +icon("icon-skype", 40, 40)
+
