@@ -895,8 +895,8 @@ h2.titles {
 }
 
 .navigation-changer {
-  border-bottom: 1px solid #1f2023;
   min-height: 80px;
+  position: relative;
   /*
   &__item {
     position: relative;
@@ -915,6 +915,12 @@ h2.titles {
     padding: 15px 0 15px 0;
     min-height: initial;
   }
+}
+.navigation-changer .divider {
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
 }
 .navigation-changer__menu {
   padding: 25px 0 25px 0;
