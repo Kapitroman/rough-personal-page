@@ -1199,7 +1199,7 @@ h2.titles {
   }
 }
 [data-color-theme=dark] .navigation-changer .navigation-changer__burger-line {
-  background-color: #ffffff;
+  color: #ffffff;
 }
 
 .navigation-changer .contacts-links {
@@ -2147,6 +2147,8 @@ h2.titles {
 }
 .contacts-links__link svg {
   color: #1f2023;
+  width: 40px;
+  height: 45px;
 }
 @media (hover: hover), screen and (min-width: 0\0 ) {
   .contacts-links__link:hover, .contacts-links__link:focus {

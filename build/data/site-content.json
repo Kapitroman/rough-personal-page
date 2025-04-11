@@ -223,12 +223,10 @@
   },
   "contactsSection": {
     "ru": [
-      "Вы можете написать e-mail:",
-      "или связаться по другим каналам:"
+      "Вы можете со мной связаться через ..."
     ],
     "en": [
-      "You can write an e-mail:",
-      "or contact through other channels"
+      "You can contact me via..."
     ]
   }
 }
