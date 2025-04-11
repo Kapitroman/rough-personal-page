@@ -465,6 +465,27 @@ template {
   font-display: swap;
   src: url("../fonts/gilroy-medium.woff2") format("woff2"), url("../fonts/gilroy-medium.woff") format("woff");
 }
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: "Caveat";
+  font-display: swap;
+  src: url("../fonts/Caveat-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-style: normal;
+  font-weight: 700;
+  font-family: "Caveat";
+  font-display: swap;
+  src: url("../fonts/Caveat-Bold.woff2") format("woff2");
+}
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: "Shantell Sans";
+  font-display: swap;
+  src: url("../fonts/ShantellSans-Regular.woff2") format("woff2");
+}
 *,
 *::before,
 *::after {
@@ -481,10 +502,10 @@ body {
 
 html {
   font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 22px;
-  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 120%;
+  font-family: "Caveat", "Arial", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -849,6 +870,7 @@ button,
   font-size: 34px;
   line-height: 42px;
   font-weight: 700;
+  font-family: "Shantell Sans", "Arial", sans-serif;
 }
 @media (max-width: 767px) {
   .titles {
@@ -874,7 +896,12 @@ h2.titles {
 
 .navigation-changer {
   border-bottom: 1px solid #1f2023;
-  min-height: 79px;
+  min-height: 80px;
+  /*
+  &__item {
+    position: relative;
+  }
+  */
 }
 @media (max-width: 767px) {
   .navigation-changer {
@@ -885,17 +912,12 @@ h2.titles {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding: 18px 0 18px 0;
+    padding: 15px 0 15px 0;
     min-height: initial;
   }
 }
-@media (max-width: 366px) {
-  .navigation-changer {
-    padding: 20px 0 20px 0;
-  }
-}
 .navigation-changer__menu {
-  padding: 26px 0 26px 0;
+  padding: 25px 0 25px 0;
 }
 @media (max-width: 767px) {
   .navigation-changer__menu {
@@ -938,7 +960,7 @@ h2.titles {
         -ms-flex-pack: start;
             justify-content: flex-start;
     margin-bottom: 60px;
-    font-size: 20px;
+    font-size: 24px;
     line-height: 24px;
   }
   .navigation-changer__list li + li {
@@ -958,11 +980,62 @@ h2.titles {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 3px 0 5px 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2px 0 6px 0;
   font-weight: 700;
   color: #828282;
   -webkit-transition: color 0.6s ease;
   transition: color 0.6s ease;
+  /*
+  &::before {
+    content: "";
+
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+
+    width: 100%;
+    height: 2px;
+
+    background-color: $color-black;
+
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: right;
+    transition: transform 0.6s ease;
+  }
+
+  &.is-active::before {
+    transform: translateX(-50%) scaleX(1);
+    transform-origin: left;
+  }
+
+  &.is-inactive::before {
+    display: none;
+  }
+
+  &.is-inactive {
+    color: $color-black;
+    pointer-events: none;
+  }
+  */
+}
+.navigation-changer__link svg {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 104%;
+  -webkit-transition: -webkit-transform 0.6s ease;
+  transition: -webkit-transform 0.6s ease;
+  transition: transform 0.6s ease;
+  transition: transform 0.6s ease, -webkit-transform 0.6s ease;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  pointer-events: none;
 }
 @media (hover: hover), screen and (min-width: 0\0 ) {
   .navigation-changer__link:hover, .navigation-changer__link:focus {
@@ -973,35 +1046,11 @@ h2.titles {
   color: #1f2023;
   pointer-events: none;
 }
-.navigation-changer__link::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 100%;
-  height: 2px;
-  background-color: #1f2023;
-  -webkit-transform: translateX(-50%) scaleX(0);
-          transform: translateX(-50%) scaleX(0);
-  -webkit-transform-origin: right;
-          transform-origin: right;
-  -webkit-transition: -webkit-transform 0.6s ease;
-  transition: -webkit-transform 0.6s ease;
-  transition: transform 0.6s ease;
-  transition: transform 0.6s ease, -webkit-transform 0.6s ease;
-}
-.navigation-changer__link.is-active::before {
-  -webkit-transform: translateX(-50%) scaleX(1);
-          transform: translateX(-50%) scaleX(1);
+.navigation-changer__link.is-active svg {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
   -webkit-transform-origin: left;
           transform-origin: left;
-}
-.navigation-changer__link.is-inactive::before {
-  display: none;
-}
-.navigation-changer__link.is-inactive {
-  color: #1f2023;
-  pointer-events: none;
 }
 .navigation-changer__wrapper-toggle {
   display: none;
@@ -1018,9 +1067,9 @@ h2.titles {
   }
 }
 .navigation-changer__text {
-  margin: 5px 0 0 0;
-  font-size: 16px;
-  line-height: 16px;
+  margin: 4px 0 0 0;
+  font-size: 24px;
+  line-height: 24px;
 }
 .navigation-changer__toggle {
   position: relative;

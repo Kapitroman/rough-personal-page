@@ -1,3 +1,5 @@
+// import { annotate } from 'rough-notation';
+
 export class NavigationChanger {
   constructor() {
     this._scrollDuration = 1000;
@@ -37,8 +39,14 @@ export class NavigationChanger {
       }
       if (currentBlockElement.getBoundingClientRect().bottom > this._blockShift && currentBlockElement.getBoundingClientRect().top <= this._blockShift) {
         link.classList.add('is-active');
+
+        //const annotation = annotate(link, { type: 'underline' });
+        //annotation.show();
+
       } else {
         link.classList.remove('is-active');
+        //const annotation = annotate(link, { type: 'underline' });
+        //annotation.remove();
       }
 
       if (document.body.getBoundingClientRect().bottom - window.innerHeight < this._blockShift && currentBlockElement.getBoundingClientRect().top > this._blockShift) {

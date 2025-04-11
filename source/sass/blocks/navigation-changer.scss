@@ -1,21 +1,23 @@
 .navigation-changer {
   border-bottom: 1px solid $color-black;
-  min-height: 79px;
+  min-height: 80px; //
 
   @include vp-767 {
     display: flex;
     flex-direction: column;
 
-    padding: 18px 0 18px 0;
+    // padding: 18px 0 18px 0;
+    padding: 15px 0 15px 0;
     min-height: initial;
   }
 
   @include vp-366 {
-    padding: 20px 0 20px 0;
+    // padding: 20px 0 20px 0;
   }
 
   &__menu {
-    padding: 26px 0 26px 0;
+    // padding: 26px 0 26px 0;
+    padding: 25px 0 25px 0;
 
     @include vp-767 {
       display: flex;
@@ -48,9 +50,11 @@
       margin-bottom: 60px;
 
       //font-size: 24px;
-      font-size: 20px;
       // line-height: 32px;
+
+      font-size: 24px;
       line-height: 24px;
+
 
       li+li {
         margin-top: 25px;
@@ -66,17 +70,40 @@
     }
   }
 
+  /*
+  &__item {
+    position: relative;
+  }
+  */
   &__link {
     position: relative;
 
     display: flex;
 
-    padding: 3px 0 5px 0;
+    flex-direction: column;
+
+    padding: 2px 0 6px 0;
 
     font-weight: 700;
     color: $color-grey;
 
     transition: color 0.6s ease;
+
+    svg {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+
+      width: 104%;
+
+      transition: transform 0.6s ease;
+      // transform: translateX(-50%) scaleX(0);
+      transform: scaleX(0);
+      transform-origin: right;
+      pointer-events: none;
+    }
+
+
 
     @media (hover: hover),
     screen and (min-width: 0\0) {
@@ -91,8 +118,15 @@
       color: $color-black;
 
       pointer-events: none;
+
+      svg {
+        // transform: translateX(-50%) scaleX(1);
+        transform: scaleX(1);
+        transform-origin: left;
+      }
     }
 
+    /*
     &::before {
       content: "";
 
@@ -123,6 +157,7 @@
       color: $color-black;
       pointer-events: none;
     }
+    */
   }
 
   &__wrapper-toggle {
@@ -137,10 +172,10 @@
   }
 
   &__text {
-    margin: 5px 0 0 0;
+    margin: 4px 0 0 0;
 
-    font-size: 16px;
-    line-height: 16px;
+    font-size: 24px;
+    line-height: 24px;
   }
 
   &__toggle {

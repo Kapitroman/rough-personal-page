@@ -19,3 +19,33 @@
     url("../fonts/gilroy-medium.woff2") format("woff2"),
     url("../fonts/gilroy-medium.woff") format("woff");
 }
+
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: "Caveat";
+
+  font-display: swap;
+  src:
+    url("../fonts/Caveat-Regular.woff2") format("woff2"),
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 700;
+  font-family: "Caveat";
+
+  font-display: swap;
+  src:
+    url("../fonts/Caveat-Bold.woff2") format("woff2"),
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: "Shantell Sans";
+
+  font-display: swap;
+  src:
+    url("../fonts/ShantellSans-Regular.woff2") format("woff2"),
+}
