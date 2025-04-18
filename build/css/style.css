@@ -1578,12 +1578,35 @@ h2.titles {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  gap: 10px;
+  padding-left: 0;
+  list-style: none;
 }
 .about__list-item {
+  position: relative;
+  padding-left: 65px;
   margin-right: auto;
+}
+@media (max-width: 767px) {
+  .about__list-item {
+    padding-left: 35px;
+  }
 }
 .about__list-item p {
   margin: 5px 0;
+}
+.about__list-marker {
+  position: absolute;
+  left: 30px;
+  top: 18px;
+  width: 18px;
+  height: 4px;
+}
+@media (max-width: 767px) {
+  .about__list-marker {
+    left: 0;
+    top: 18px;
+  }
 }
 .about__text--accent {
   margin-right: auto;
@@ -1591,11 +1614,8 @@ h2.titles {
 .about__link {
   display: block;
   margin-right: auto;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  font-size: 14px;
-  line-height: 18px;
-  min-height: 18px;
+  font-size: 20px;
+  line-height: 120%;
 }
 @media (hover: hover), screen and (min-width: 0\0 ) {
   .about__link:hover, .about__link:focus {
