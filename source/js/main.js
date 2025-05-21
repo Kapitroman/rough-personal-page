@@ -7,9 +7,7 @@ import { initChangeLanguage } from './modules/init-change-language';
 import { initDynamicAdaptive } from './modules/init-dynamic-adaptive';
 import { initChangeColorTheme } from './modules/init-change-color-theme';
 import { initTabs } from './modules/init-tabs';
-import { annotateTextBlocks } from './modules/annotateTextBlocks';
-
-// import { StickyHeader } from './modules/sticky-header';
+import { annotateTextBlocks } from './modules/annotate-text-blocks';
 
 // ---------------------------------
 
@@ -33,9 +31,6 @@ window.addEventListener('DOMContentLoaded', () => {
     initBurgerMenu();
     initTabs();
     annotateTextBlocks();
-
-    // const stickyHeader = new StickyHeader();
-    // stickyHeader.init();
   });
 });
 

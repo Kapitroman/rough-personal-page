@@ -3,24 +3,37 @@
   -webkit-text-fill-color: $color-black;
 
   &__controls {
+    position: relative;
+
     display: flex;
     justify-content: flex-start;
-    width: 100%;
-    margin-bottom: 40px;
-    border-bottom: 1px solid $color-black;
-    /*
-    @media screen and (max-width: 480px) {
-      //flex-wrap: wrap;
-      white-space: nowrap;
-      //overflow-x: auto;
-      overflow-y: hidden;
-      -ms-overflow-style: none;
-      scrollbar-width: none;
-    }
-    */
 
-    @media screen and (max-width: 480px) {
-      font-size: 14px;
+    width: 100%;
+    margin-bottom: 80px;
+
+    font-size: 32px;
+    line-height: 120%;
+
+    @include vp-767 {
+      font-size: 22px;
+    }
+
+    div:nth-of-type(1) {
+      left: 0;
+    }
+
+    div:nth-of-type(2) {
+      right: 0;
+    }
+
+    .divider {
+      position: absolute;
+      left: 0;
+      bottom: -20px;
+
+      width: 100%;
+
+      pointer-events: none;
     }
   }
 
@@ -29,11 +42,12 @@
   }
 
   &__control {
-    //text-transform: uppercase;
+    position: relative;
+    z-index: 2;
+
     cursor: pointer;
-    //margin: 0 20px;
+
     margin: 0;
-    border-radius: 10px 10px 0 0;
     padding: 15px 25px;
     opacity: 0.5;
     min-width: auto;
@@ -42,92 +56,57 @@
     border: none;
     background-color: $color-transparent;
 
-    @media screen and (max-width: 1023px) {
-      margin: 0 10px;
-      padding: 15px;
+    &+.tabs__control-background {
+      opacity: 0.5;
     }
-
-    @media screen and (max-width: 767px) {
-      margin: 10px 2% 0;
-      padding: 10px;
-      //width: 45%;
-    }
-    /*
-    @media screen and (max-width: 480px) {
-      display: inline-flex;
-    }
-    */
 
     &.is-active {
       opacity: 1;
+      color: $color-default-white;
+      -webkit-text-fill-color: $color-default-white;
       pointer-events: none;
 
       position: relative;
 
-      border: 1px solid $color-black;
-      border-bottom: none;
-      /*
-      @media screen and (max-width: 480px) {
-        border: none;
-        background-color: $color-dark-gray;
+      &+.tabs__control-background {
+        color: $color-black;
+        opacity: 0.7;
       }
-      */
-      &::after {
-        content: "";
-        position: absolute;
-        bottom: -1px;
-        left: 0;
-        //z-index: 2;
-        width: 100%;
-        height: 100%;
-        border-bottom: 1px solid $color-white-smoke;
-        /*
-        @media screen and (max-width: 480px) {
-          display: none;
-        }
-        */
+    }
+  }
+
+  &__control-background {
+    position: absolute;
+    top: 0;
+
+    width: 50%;
+    height: 100%;
+    padding: 2% 10%;
+
+    pointer-events: none;
+
+    color: $color-transparent;
+
+    @include vp-767 {
+      padding: 2% 6%;
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+
+      path {
+        stroke-width: 3px;
       }
     }
   }
 
   &__content {
-    margin-bottom: 40px;
-
     transition: height 0.3s;
   }
 
   &__element {
-    //padding: 25px;
     width: 100%;
-    /*
-    @media screen and (max-width: 767px) {
-      padding: 15px;
-    }
-
-    p {
-      margin: 0;
-
-      &:not(:last-child) {
-        margin: 0 0 20px 0;
-      }
-    }
-
-    &:nth-child(1) {
-      background-color: rgb(250, 235, 215);
-    }
-
-    &:nth-child(2) {
-      background-color: rgb(229, 250, 215);
-    }
-
-    &:nth-child(3) {
-      background-color: rgb(180, 188, 233);
-    }
-
-    &:nth-child(4) {
-      background-color: rgb(255, 187, 204);
-    }
-    */
   }
 
   &--unset .tabs__content {
@@ -146,20 +125,17 @@
   -webkit-text-fill-color: $color-default-white;
 
   .tabs__controls {
-    border-bottom: 1px solid $color-default-white;
+    .rough-annotation path {
+      stroke: $color-default-white;
+    }
   }
 
   .tabs__control.is-active {
-    border: 1px solid $color-default-white;
-    border-bottom: none;
-    /*
-    @media screen and (max-width: 480px) {
-      border: none;
-    }
-    */
+    color: $color-black;
+    -webkit-text-fill-color: $color-black;
   }
 
-  .tabs__control.is-active::after {
-    border-bottom: 1px solid $color-night-rider;
+  .tabs__control.is-active+.tabs__control-background {
+    color: $color-default-white;
   }
 }

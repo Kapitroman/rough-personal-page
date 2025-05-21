@@ -6,7 +6,6 @@
   padding: 9px 10px;
   border: none;
 
-
   &__wrap {
     position: absolute;
     top: 0;
@@ -81,14 +80,11 @@
 }
 
 [data-color-theme="dark"] .toggle {
-  // border-color: $color-default-white;
   color: $color-default-white;
 
   input~span {
     color: $color-dark-gray;
-    // border-color: $color-black;
     background-color: $color-black;
-    //border: none;
 
     svg {
       color: $color-grey;
@@ -100,11 +96,9 @@
   }
 
   input:checked~span {
-    // border-color: $color-default-white;
     color: $color-default-white;
     background-color: $color-black;
 
-    // border: none;
     svg {
       color: $color-default-white;
     }

@@ -20,6 +20,14 @@ const annotateTextBlocks = () => {
   const textAccentItems = Array.from(document.querySelectorAll('.about__text--accent'));
   const textAccentItemsAnotation = textAccentItems.map((item) => annotate(item, { type: 'highlight', color: 'yellowgreen' }));
   annotationGroup(textAccentItemsAnotation).show();
+
+  const portfolioLinks = Array.from(document.querySelectorAll('.portfolio__link'));
+  const portfolioLinksAnotation = portfolioLinks.map((item) => annotate(item, { type: 'box', color: 'red' }));
+  annotationGroup(portfolioLinksAnotation).show();
+
+  const portfolioTabs = Array.from(document.querySelectorAll('.tabs__control-border'));
+  const portfolioTabsAnotation = portfolioTabs.map((item) => annotate(item, { type: 'box', color: 'black' }));
+  annotationGroup(portfolioTabsAnotation).show();
 }
 
 export { annotateTextBlocks };

@@ -1,12 +1,4 @@
-/*
 .portfolio__wrapper {
-  img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-  }
-
   @include vp-767 {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(209px, 1fr));
@@ -15,7 +7,7 @@
   }
 }
 
-.portfolio__group + .portfolio__group {
+.portfolio__group+.portfolio__group {
   margin-top: 85px;
 
   @include vp-767 {
@@ -24,21 +16,139 @@
 }
 
 .portfolio__group-images {
+  position: relative;
+
   display: flex;
-  align-items: flex-end;
 
   margin-bottom: 25px;
+
+  @include vp-767 {
+    width: 100%;
+  }
+}
+
+.portfolio__laptop-mock {
+  display: block;
+
+  position: relative;
+  z-index: 2;
+
+  width: 626px;
+  aspect-ratio: 626 / 411;
+
+  pointer-events: none;
+}
+
+.portfolio__smartphone-mock {
+  display: block;
+
+  position: relative;
+  z-index: 2;
+
+  width: 130px;
+  aspect-ratio: 130 / 240;
+
+  pointer-events: none;
+
+  @include vp-767 {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.portfolio__group:nth-child(odd) {
+  .portfolio__group-images {
+    justify-content: flex-end;
+
+    @include vp-767 {
+      justify-content: initial;
+    }
+  }
+
+  .portfolio__laptop-image {
+    position: relative;
+  }
+
+  .portfolio__smartphone-image {
+    position: absolute;
+    left: 0;
+    top: 80px;
+
+    @include vp-767 {
+      position: static;
+
+      width: 100%;
+      aspect-ratio: 130 / 240;
+    }
+  }
+}
+
+.portfolio__group:nth-child(even) {
+  .portfolio__group-images {
+    justify-content: flex-start;
+
+    @include vp-767 {
+      justify-content: initial;
+    }
+  }
+
+  .portfolio__laptop-image {
+    position: relative;
+  }
+
+  .portfolio__smartphone-image {
+    position: absolute;
+    right: 0;
+    top: 80px;
+
+    @include vp-767 {
+      position: static;
+
+      width: 100%;
+      aspect-ratio: 130 / 240;
+    }
+  }
 }
 
 .portfolio__laptop-image {
-  position: relative;
-
-  width: 75%;
-
-  aspect-ratio: 709 / 411;
-
   @include vp-767 {
     display: none;
+  }
+}
+
+.portfolio__laptop-screen {
+  position: absolute;
+  top: 6.47%;
+  left: 14.856%;
+
+  width: 69.33%;
+  aspect-ratio: 434 / 246;
+  overflow: hidden;
+
+  img {
+    mask-image: url('../img/content/mask-image.png');
+    mask-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.portfolio__smartphone-screen {
+  position: absolute;
+  top: 10%;
+  left: 9.23%;
+
+  width: 83.076%;
+  aspect-ratio: 108 /194;
+  overflow: hidden;
+
+  img {
+    mask-image: url('../img/content/mask-image2.png');
+    mask-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
 
@@ -69,127 +179,21 @@
   }
 }
 
-.portfolio__laptop-screen {
-  position: absolute;
-  top: 6.3%;
-  left: 12.3%;
-  z-index: 2;
-
-  width: 75.4%;
-  height: 81.8%;
-
-  overflow: hidden;
-}
-
-.portfolio__smartphone-image {
-  position: relative;
-
-  border-radius: 15px;
-  width: 15%;
-
-  aspect-ratio: 200 / 418;
-
-  @include vp-767 {
-    width: 100%;
-    max-width: 262px;
-  }
-
-  img {
-    border-radius: 10px;
-
-    @include vp-767 {
-      border-radius: 20px;
-    }
-  }
-}
-
-.portfolio__smartphone-screen {
-  position: absolute;
-  z-index: 2;
-  top: 4.8%;
-  left: 3.42%;
-
-  width: 93%;
-  height: 91.16%;
-  border-radius: 5px;
-
-  overflow: hidden;
-
-  @include vp-767 {
-    border-radius: 8px;
-  }
-
-  img {
-    border-radius: initial;
-
-    @include vp-767 {
-      border-radius: initial;
-    }
-  }
-}
-
-.portfolio__group:nth-child(odd) {
-  .portfolio__smartphone-image {
-    margin-left: 7%;
-    margin-right: 3%;
-
-    @include vp-767 {
-      margin: 0 auto;
-    }
-  }
-}
-
-.portfolio__group:nth-child(even) {
-  .portfolio__smartphone-image {
-    order: 2;
-    margin-left: 3%;
-    margin-right: 7%;
-
-    @include vp-767 {
-      order: initial;
-      margin: 0 auto;
-    }
-  }
-}
-
-
-.portfolio__group-info {
-  display: flex;
-
-  margin-left: 7%;
-  margin-right: 7%;
-
-  @include vp-767 {
-    flex-direction: column;
-
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
-
 .portfolio__group-links {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
 
-  margin-right: 5%;
+  margin-bottom: 15px;
 
-  @include vp-767 {
-    flex-direction: row;
-
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: 20px;
-  }
+  @include vp-767 {}
 }
 
 .portfolio__link {
   display: inline-flex;
   align-items: center;
-  flex-shrink: 0;
 
-  border: 1px solid $color-black;
-  padding: 4px 8px;
-  border-radius: 10px;
+  padding: 0 4px;
 
   svg {
     width: 18px;
@@ -198,13 +202,13 @@
   }
 
   @include vp-767 {
-    @include vp-767 {
-      font-size: 16px;
-      line-height: 19px;
-    }
+    font-size: 22px;
+    line-height: 120%;
   }
 
-  @media (hover: hover), screen and (min-width: 0\0) {
+  @media (hover: hover),
+  screen and (min-width: 0\0) {
+
     &:hover,
     &:focus {
       opacity: 0.8;
@@ -216,23 +220,6 @@
   display: none;
 }
 
-.portfolio__link + .portfolio__link {
-  margin-top: 10px;
-
-  @include vp-767 {
-    margin-top: 0;
-    margin-left: 10px;
-  }
-}
-
-.portfolio__group-text {
-  text-align: left;
-
-  @include vp-767 {
-    text-align: center;
-  }
-}
-
 .portfolio__title {
   margin: 0;
   margin-bottom: 10px;
@@ -240,8 +227,8 @@
   line-height: 22px;
 
   @include vp-767 {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 22px;
+    line-height: 150%;
   }
 }
 
@@ -249,15 +236,7 @@
   margin: 0;
 
   @include vp-767 {
-    font-size: 16px;
-    line-height: 19px;
+    font-size: 22px;
+    line-height: 120%
   }
 }
-
-[data-color-theme="dark"] .portfolio {
-  .portfolio__link {
-    color: $color-default-white;
-    border-color: $color-default-white;
-  }
-}
-*/

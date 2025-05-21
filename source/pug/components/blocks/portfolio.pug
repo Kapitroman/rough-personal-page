@@ -6,21 +6,20 @@ mixin portfolio()
       .tabs.no-transition-global(data-tabs='parent', data-delay='300')
         .tabs__controls(data-tabs='controls')
           button.tabs__control.btn(type='button', data-tabs='control', data-lang-key="projectCategories")
+          .tabs__control-background
+            +icon("rough-tab", 62, 36).tabs__control-border
           button.tabs__control.btn(type='button', data-tabs='control', data-lang-key="projectCategories")
+          .tabs__control-background
+            +icon("rough-tab", 62, 36).tabs__control-border
+          +icon("rough-divider", 720, 5).divider
         .tabs__content(data-tabs='content')
           .tabs__element(data-tabs='element')
 
             .portfolio__wrapper
-              //-.portfolio__group
+              .portfolio__group
                 .portfolio__group-images
                   .portfolio__smartphone-image
-                    +picture-media({
-                      path: "content",
-                      image: "smartphone",
-                      format: "png",
-                      alt: "mockup smartphone",
-                      loading: true
-                    })
+                    +icon("rough-smartphone", 130, 240).portfolio__smartphone-mock
                     .portfolio__smartphone-screen.portfolio__scroll
                       +picture-media({
                         path: "content/portfolio",
@@ -30,15 +29,7 @@ mixin portfolio()
                         loading: true
                       })
                   .portfolio__laptop-image
-                    +picture-media({
-                      media: "max-width: 767px",
-                      path: "content",
-                      image: "laptop",
-                      image2: "low-quality-3x3",
-                      format: "png",
-                      alt: "mockup laptop",
-                      loading: true
-                    })
+                    +icon("rough-notebook", 626, 411).portfolio__laptop-mock
                     .portfolio__laptop-screen.portfolio__scroll
                       +picture-media({
                         media: "max-width: 767px",
@@ -61,16 +52,10 @@ mixin portfolio()
                     p.portfolio__title(data-lang-key="projectNames")
                     p.portfolio__description(data-lang-key="projectDescription")
 
-              //-.portfolio__group
+              .portfolio__group
                 .portfolio__group-images
                   .portfolio__smartphone-image
-                    +picture-media({
-                      path: "content",
-                      image: "smartphone",
-                      format: "png",
-                      alt: "mockup smartphone",
-                      loading: true
-                    })
+                    +icon("rough-smartphone", 130, 240).portfolio__smartphone-mock
                     .portfolio__smartphone-screen.portfolio__scroll
                       +picture-media({
                         path: "content/portfolio",
@@ -80,15 +65,7 @@ mixin portfolio()
                         loading: true
                       })
                   .portfolio__laptop-image
-                    +picture-media({
-                      media: "max-width: 767px",
-                      path: "content",
-                      image: "laptop",
-                      image2: "low-quality-3x3",
-                      format: "png",
-                      alt: "mockup laptop",
-                      loading: true
-                    })
+                    +icon("rough-notebook", 626, 411).portfolio__laptop-mock
                     .portfolio__laptop-screen.portfolio__scroll.portfolio__scroll--horizontal
                       +picture-media({
                         media: "max-width: 767px",
@@ -111,16 +88,10 @@ mixin portfolio()
                     p.portfolio__title(data-lang-key="projectNames")
                     p.portfolio__description(data-lang-key="projectDescription")
 
-              //-.portfolio__group
+              .portfolio__group
                 .portfolio__group-images
                   .portfolio__smartphone-image
-                    +picture-media({
-                      path: "content",
-                      image: "smartphone",
-                      format: "png",
-                      alt: "mockup smartphone",
-                      loading: true
-                    })
+                    +icon("rough-smartphone", 130, 240).portfolio__smartphone-mock
                     .portfolio__smartphone-screen.portfolio__scroll
                       +picture-media({
                         path: "content/portfolio",
@@ -130,15 +101,7 @@ mixin portfolio()
                         loading: true
                       })
                   .portfolio__laptop-image
-                    +picture-media({
-                      media: "max-width: 767px",
-                      path: "content",
-                      image: "laptop",
-                      image2: "low-quality-3x3",
-                      format: "png",
-                      alt: "mockup laptop",
-                      loading: true
-                    })
+                    +icon("rough-notebook", 626, 411).portfolio__laptop-mock
                     .portfolio__laptop-screen.portfolio__scroll
                       +picture-media({
                         media: "max-width: 767px",
@@ -161,16 +124,10 @@ mixin portfolio()
                     p.portfolio__title(data-lang-key="projectNames")
                     p.portfolio__description(data-lang-key="projectDescription")
 
-              //-.portfolio__group
+              .portfolio__group
                 .portfolio__group-images
                   .portfolio__smartphone-image
-                    +picture-media({
-                      path: "content",
-                      image: "smartphone",
-                      format: "png",
-                      alt: "mockup smartphone",
-                      loading: true
-                    })
+                    +icon("rough-smartphone", 130, 240).portfolio__smartphone-mock
                     .portfolio__smartphone-screen.portfolio__scroll
                       +picture-media({
                         path: "content/portfolio",
@@ -180,15 +137,7 @@ mixin portfolio()
                         loading: true
                       })
                   .portfolio__laptop-image
-                    +picture-media({
-                      media: "max-width: 767px",
-                      path: "content",
-                      image: "laptop",
-                      image2: "low-quality-3x3",
-                      format: "png",
-                      alt: "mockup laptop",
-                      loading: true
-                    })
+                    +icon("rough-notebook", 626, 411).portfolio__laptop-mock
                     .portfolio__laptop-screen.portfolio__scroll
                       +picture-media({
                         media: "max-width: 767px",
@@ -211,16 +160,10 @@ mixin portfolio()
                     p.portfolio__title(data-lang-key="projectNames")
                     p.portfolio__description(data-lang-key="projectDescription")
 
-              //-.portfolio__group
+              .portfolio__group
                 .portfolio__group-images
                   .portfolio__smartphone-image
-                    +picture-media({
-                      path: "content",
-                      image: "smartphone",
-                      format: "png",
-                      alt: "mockup smartphone",
-                      loading: true
-                    })
+                    +icon("rough-smartphone", 130, 240).portfolio__smartphone-mock
                     .portfolio__smartphone-screen.portfolio__scroll
                       +picture-media({
                         path: "content/portfolio",
@@ -230,15 +173,7 @@ mixin portfolio()
                         loading: true
                       })
                   .portfolio__laptop-image
-                    +picture-media({
-                      media: "max-width: 767px",
-                      path: "content",
-                      image: "laptop",
-                      image2: "low-quality-3x3",
-                      format: "png",
-                      alt: "mockup laptop",
-                      loading: true
-                    })
+                    +icon("rough-notebook", 626, 411).portfolio__laptop-mock
                     .portfolio__laptop-screen.portfolio__scroll
                       +picture-media({
                         media: "max-width: 767px",
@@ -261,16 +196,10 @@ mixin portfolio()
                     p.portfolio__title(data-lang-key="projectNames")
                     p.portfolio__description(data-lang-key="projectDescription")
 
-              //-.portfolio__group
+              .portfolio__group
                 .portfolio__group-images
                   .portfolio__smartphone-image
-                    +picture-media({
-                      path: "content",
-                      image: "smartphone",
-                      format: "png",
-                      alt: "mockup smartphone",
-                      loading: true
-                    })
+                    +icon("rough-smartphone", 130, 240).portfolio__smartphone-mock
                     .portfolio__smartphone-screen.portfolio__scroll
                       +picture-media({
                         path: "content/portfolio",
@@ -280,15 +209,7 @@ mixin portfolio()
                         loading: true
                       })
                   .portfolio__laptop-image
-                    +picture-media({
-                      media: "max-width: 767px",
-                      path: "content",
-                      image: "laptop",
-                      image2: "low-quality-3x3",
-                      format: "png",
-                      alt: "mockup laptop",
-                      loading: true
-                    })
+                    +icon("rough-notebook", 626, 411).portfolio__laptop-mock
                     .portfolio__laptop-screen.portfolio__scroll
                       +picture-media({
                         media: "max-width: 767px",
@@ -311,16 +232,10 @@ mixin portfolio()
                     p.portfolio__title(data-lang-key="projectNames")
                     p.portfolio__description(data-lang-key="projectDescription")
 
-              //-.portfolio__group
+              .portfolio__group
                 .portfolio__group-images
                   .portfolio__smartphone-image
-                    +picture-media({
-                      path: "content",
-                      image: "smartphone",
-                      format: "png",
-                      alt: "mockup smartphone",
-                      loading: true
-                    })
+                    +icon("rough-smartphone", 130, 240).portfolio__smartphone-mock
                     .portfolio__smartphone-screen.portfolio__scroll
                       +picture-media({
                         path: "content/portfolio",
@@ -330,15 +245,7 @@ mixin portfolio()
                         loading: true
                       })
                   .portfolio__laptop-image
-                    +picture-media({
-                      media: "max-width: 767px",
-                      path: "content",
-                      image: "laptop",
-                      image2: "low-quality-3x3",
-                      format: "png",
-                      alt: "mockup laptop",
-                      loading: true
-                    })
+                    +icon("rough-notebook", 626, 411).portfolio__laptop-mock
                     .portfolio__laptop-screen.portfolio__scroll
                       +picture-media({
                         media: "max-width: 767px",
@@ -361,16 +268,10 @@ mixin portfolio()
                     p.portfolio__title(data-lang-key="projectNames")
                     p.portfolio__description(data-lang-key="projectDescription")
 
-              //-.portfolio__group
+              .portfolio__group
                 .portfolio__group-images
                   .portfolio__smartphone-image
-                    +picture-media({
-                      path: "content",
-                      image: "smartphone",
-                      format: "png",
-                      alt: "mockup smartphone",
-                      loading: true
-                    })
+                    +icon("rough-smartphone", 130, 240).portfolio__smartphone-mock
                     .portfolio__smartphone-screen.portfolio__scroll.portfolio__scroll--long
                       +picture-media({
                       path: "content/portfolio",
@@ -380,15 +281,7 @@ mixin portfolio()
                       loading: true
                     })
                   .portfolio__laptop-image
-                    +picture-media({
-                      media: "max-width: 767px",
-                      path: "content",
-                      image: "laptop",
-                      image2: "low-quality-3x3",
-                      format: "png",
-                      alt: "mockup laptop",
-                      loading: true
-                    })
+                    +icon("rough-notebook", 626, 411).portfolio__laptop-mock
                     .portfolio__laptop-screen.portfolio__scroll.portfolio__scroll--long
                       +picture-media({
                         media: "max-width: 767px",
@@ -411,16 +304,10 @@ mixin portfolio()
                     p.portfolio__title(data-lang-key="projectNames")
                     p.portfolio__description(data-lang-key="projectDescription")
 
-              //-.portfolio__group
+              .portfolio__group
                 .portfolio__group-images
                   .portfolio__smartphone-image
-                    +picture-media({
-                      path: "content",
-                      image: "smartphone",
-                      format: "png",
-                      alt: "mockup smartphone",
-                      loading: true
-                    })
+                    +icon("rough-smartphone", 130, 240).portfolio__smartphone-mock
                     .portfolio__smartphone-screen.portfolio__scroll.portfolio__scroll--long
                       +picture-media({
                         path: "content/portfolio",
@@ -430,15 +317,7 @@ mixin portfolio()
                         loading: true
                       })
                   .portfolio__laptop-image
-                    +picture-media({
-                      media: "max-width: 767px",
-                      path: "content",
-                      image: "laptop",
-                      image2: "low-quality-3x3",
-                      format: "png",
-                      alt: "mockup laptop",
-                      loading: true
-                    })
+                    +icon("rough-notebook", 626, 411).portfolio__laptop-mock
                     .portfolio__laptop-screen.portfolio__scroll.portfolio__scroll--long
                       +picture-media({
                         media: "max-width: 767px",
@@ -461,16 +340,10 @@ mixin portfolio()
                     p.portfolio__title(data-lang-key="projectNames")
                     p.portfolio__description(data-lang-key="projectDescription")
 
-              //-.portfolio__group
+              .portfolio__group
                 .portfolio__group-images
                   .portfolio__smartphone-image
-                    +picture-media({
-                      path: "content",
-                      image: "smartphone",
-                      format: "png",
-                      alt: "mockup smartphone",
-                      loading: true
-                    })
+                    +icon("rough-smartphone", 130, 240).portfolio__smartphone-mock
                     .portfolio__smartphone-screen.portfolio__scroll.portfolio__scroll--long
                       +picture-media({
                         path: "content/portfolio",
@@ -480,15 +353,7 @@ mixin portfolio()
                         loading: true
                       })
                   .portfolio__laptop-image
-                    +picture-media({
-                      media: "max-width: 767px",
-                      path: "content",
-                      image: "laptop",
-                      image2: "low-quality-3x3",
-                      format: "png",
-                      alt: "mockup laptop",
-                      loading: true
-                    })
+                    +icon("rough-notebook", 626, 411).portfolio__laptop-mock
                     .portfolio__laptop-screen.portfolio__scroll.portfolio__scroll--long
                       +picture-media({
                         media: "max-width: 767px",
@@ -511,16 +376,10 @@ mixin portfolio()
                     p.portfolio__title(data-lang-key="projectNames")
                     p.portfolio__description(data-lang-key="projectDescription")
 
-              //-.portfolio__group
+              .portfolio__group
                 .portfolio__group-images
                   .portfolio__smartphone-image
-                    +picture-media({
-                      path: "content",
-                      image: "smartphone",
-                      format: "png",
-                      alt: "mockup smartphone",
-                      loading: true
-                    })
+                    +icon("rough-smartphone", 130, 240).portfolio__smartphone-mock
                     .portfolio__smartphone-screen.portfolio__scroll
                       +picture-media({
                         path: "content/portfolio",
@@ -530,15 +389,7 @@ mixin portfolio()
                         loading: true
                       })
                   .portfolio__laptop-image
-                    +picture-media({
-                      media: "max-width: 767px",
-                      path: "content",
-                      image: "laptop",
-                      image2: "low-quality-3x3",
-                      format: "png",
-                      alt: "mockup laptop",
-                      loading: true
-                    })
+                    +icon("rough-notebook", 626, 411).portfolio__laptop-mock
                     .portfolio__laptop-screen.portfolio__scroll
                       +picture-media({
                         media: "max-width: 767px",
@@ -561,16 +412,10 @@ mixin portfolio()
                     p.portfolio__title(data-lang-key="projectNames")
                     p.portfolio__description(data-lang-key="projectDescription")
 
-              //-.portfolio__group
+              .portfolio__group
                 .portfolio__group-images
                   .portfolio__smartphone-image
-                    +picture-media({
-                      path: "content",
-                      image: "smartphone",
-                      format: "png",
-                      alt: "mockup smartphone",
-                      loading: true
-                    })
+                    +icon("rough-smartphone", 130, 240).portfolio__smartphone-mock
                     .portfolio__smartphone-screen.portfolio__scroll
                       +picture-media({
                         path: "content/portfolio",
@@ -580,15 +425,7 @@ mixin portfolio()
                         loading: true
                       })
                   .portfolio__laptop-image
-                    +picture-media({
-                      media: "max-width: 767px",
-                      path: "content",
-                      image: "laptop",
-                      image2: "low-quality-3x3",
-                      format: "png",
-                      alt: "mockup laptop",
-                      loading: true
-                    })
+                    +icon("rough-notebook", 626, 411).portfolio__laptop-mock
                     .portfolio__laptop-screen.portfolio__scroll
                       +picture-media({
                         media: "max-width: 767px",
@@ -612,69 +449,12 @@ mixin portfolio()
                     p.portfolio__description(data-lang-key="projectDescription")
 
 
-
+          .tabs__element(data-tabs='element')
+            .portfolio__wrapper
               .portfolio__group
                 .portfolio__group-images
                   .portfolio__smartphone-image
-                    +picture-media({
-                      path: "content",
-                      image: "smartphone",
-                      format: "png",
-                      alt: "mockup smartphone",
-                      loading: true
-                    })
-                    .portfolio__smartphone-screen.portfolio__scroll
-                      +picture-media({
-                        path: "content/portfolio",
-                        image: "project-screen-mobile-011",
-                        format: "jpg",
-                        alt: "screen project",
-                        loading: true
-                      })
-                  .portfolio__laptop-image
-                    +picture-media({
-                      media: "max-width: 767px",
-                      path: "content",
-                      image: "laptop",
-                      image2: "low-quality-3x3",
-                      format: "png",
-                      alt: "mockup laptop",
-                      loading: true
-                    })
-                    .portfolio__laptop-screen.portfolio__scroll
-                      +picture-media({
-                        media: "max-width: 767px",
-                        path: "content/portfolio",
-                        image: "project-screen-laptop-011",
-                        image2: "low-quality-3x3",
-                        format: "jpg",
-                        alt: "screen laptop",
-                        loading: true
-                      })
-                .portfolio__group-info
-                  .portfolio__group-links
-                    a.portfolio__link(href="https://kapitroman.github.io/my-xyberpaws/")
-                      +icon("icon-hyperlink", 18, 18)
-                      span(data-lang-key="linkLabels")
-                    a.portfolio__link(href="https://github.com/Kapitroman/my-xyberpaws")
-                      +icon("icon-github", 18, 18)
-                      span(data-lang-key="codeLabels")
-                  .portfolio__group-text
-                    p.portfolio__title(data-lang-key="projectNames")
-                    p.portfolio__description(data-lang-key="projectDescription")
-
-          .tabs__element(data-tabs='element')
-            .portfolio__wrapper
-              //-.portfolio__group
-                .portfolio__group-images
-                  .portfolio__smartphone-image
-                    +picture-media({
-                      path: "content",
-                      image: "smartphone",
-                      format: "png",
-                      alt: "mockup smartphone",
-                      loading: true
-                    })
+                    +icon("rough-smartphone", 130, 240).portfolio__smartphone-mock
                     .portfolio__smartphone-screen.portfolio__scroll
                       +picture-media({
                         path: "content/portfolio",
@@ -684,15 +464,7 @@ mixin portfolio()
                         loading: true
                       })
                   .portfolio__laptop-image
-                    +picture-media({
-                      media: "max-width: 767px",
-                      path: "content",
-                      image: "laptop",
-                      image2: "low-quality-3x3",
-                      format: "png",
-                      alt: "mockup laptop",
-                      loading: true
-                    })
+                    +icon("rough-notebook", 626, 411).portfolio__laptop-mock
                     .portfolio__laptop-screen.portfolio__scroll
                       +picture-media({
                         media: "max-width: 767px",
@@ -715,16 +487,10 @@ mixin portfolio()
                     p.portfolio__title(data-lang-key="projectNames")
                     p.portfolio__description(data-lang-key="projectDescription")
 
-              //-.portfolio__group
+              .portfolio__group
                 .portfolio__group-images
                   .portfolio__smartphone-image
-                    +picture-media({
-                      path: "content",
-                      image: "smartphone",
-                      format: "png",
-                      alt: "mockup smartphone",
-                      loading: true
-                    })
+                    +icon("rough-smartphone", 130, 240).portfolio__smartphone-mock
                     .portfolio__smartphone-screen.portfolio__scroll
                       +picture-media({
                         path: "content/portfolio",
@@ -734,15 +500,7 @@ mixin portfolio()
                         loading: true
                       })
                   .portfolio__laptop-image
-                    +picture-media({
-                      media: "max-width: 767px",
-                      path: "content",
-                      image: "laptop",
-                      image2: "low-quality-3x3",
-                      format: "png",
-                      alt: "mockup laptop",
-                      loading: true
-                    })
+                    +icon("rough-notebook", 626, 411).portfolio__laptop-mock
                     .portfolio__laptop-screen.portfolio__scroll
                       +picture-media({
                         media: "max-width: 767px",
@@ -765,16 +523,10 @@ mixin portfolio()
                     p.portfolio__title(data-lang-key="projectNames")
                     p.portfolio__description(data-lang-key="projectDescription")
 
-              //-.portfolio__group
+              .portfolio__group
                 .portfolio__group-images
                   .portfolio__smartphone-image
-                    +picture-media({
-                      path: "content",
-                      image: "smartphone",
-                      format: "png",
-                      alt: "mockup smartphone",
-                      loading: true
-                    })
+                    +icon("rough-smartphone", 130, 240).portfolio__smartphone-mock
                     .portfolio__smartphone-screen.portfolio__scroll
                       +picture-media({
                         path: "content/portfolio",
@@ -784,15 +536,7 @@ mixin portfolio()
                         loading: true
                       })
                   .portfolio__laptop-image
-                    +picture-media({
-                      media: "max-width: 767px",
-                      path: "content",
-                      image: "laptop",
-                      image2: "low-quality-3x3",
-                      format: "png",
-                      alt: "mockup laptop",
-                      loading: true
-                    })
+                    +icon("rough-notebook", 626, 411).portfolio__laptop-mock
                     .portfolio__laptop-screen.portfolio__scroll
                       +picture-media({
                         media: "max-width: 767px",
